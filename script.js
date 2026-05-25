@@ -1,22 +1,4 @@
-// Dark Mode Toggle
-const themeToggle = document.getElementById('themeToggle');
-const body = document.body;
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-// Check for saved theme preference or default to system preference
-const currentTheme = localStorage.getItem('theme') || (prefersDark.matches ? 'dark' : 'light');
-
-if (currentTheme === 'dark') {
-    body.classList.add('dark-mode');
-    themeToggle.textContent = '☀️';
-}
-
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const isDark = body.classList.contains('dark-mode');
-    themeToggle.textContent = isDark ? '☀️' : '🌙';
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-});
+// (Dark mode removed — theme toggle button and behavior were removed)
 
 // Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
