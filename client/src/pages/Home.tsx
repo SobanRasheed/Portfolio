@@ -20,7 +20,7 @@ const projectImage = "/manus-storage/soban-hero-grid_e05eec9b.png";
 
 const projects = [
   { title: "API Gateway", type: "Node.js · Express.js · REST API", description: "A unified gateway for switching between multiple AI models through one endpoint, with credit-based usage and region-aware routing.", image: projectImage, tone: "project-red", href: "https://github.com/SobanRasheed", demo: "https://chat.fennicai.tech" },
-  { title: "DocFlow", type: "Flutter · React · Vite · Node.js", description: "A cross-platform document conversion app with a self-hosted engine for PDF, Word, image conversion, and compression.", image: portraitImage, tone: "project-gray", href: "https://github.com/SobanRasheed", demo: "https://docflowmarketing.vercel.app/" },
+  { title: "DocFlow", type: "Flutter · React · Vite · Node.js", description: "A cross-platform document conversion app with a self-hosted engine for PDF, Word, image conversion, and compression.", image: "/manus-storage/docflow-website-preview_6030468a.png", tone: "project-gray", href: "https://github.com/SobanRasheed", demo: "https://docflowmarketing.vercel.app/" },
   { title: "COMSATS Guide Pro", type: "HTML · CSS · JavaScript", description: "A student utility app with a GPA calculator, course planner, timetable builder, and persistent browser storage.", image: projectImage, tone: "project-black", href: "https://github.com/SobanRasheed/comsats-guide-pro", demo: "https://github.com/SobanRasheed/comsats-guide-pro" },
 ];
 
@@ -43,14 +43,7 @@ function ExternalLinkButton({ href, children }: { href: string; children: React.
 
 function ProjectBanner({ project, index }: { project: (typeof projects)[number]; index: number }) {
   const content = <>
-    {project.title === "DocFlow" ? (
-      <div className="docflow-mini-preview" aria-hidden="true">
-        <div className="docflow-mini-nav"><b>↘ DocFlow</b><span>Tools　 Solutions　 How It Works　 FAQ</span></div>
-        <div className="docflow-mini-copy"><small>DOCUMENT CONVERSION PLATFORM</small><strong>Your documents<br /><em>best version<br />starts here!</em></strong><div><i>DOWNLOAD FOR FREE</i><i>EXPLORE TOOLS</i></div></div>
-        <div className="docflow-mini-window"><span>PDF</span><b>↗</b><small>Fast · private · on-device</small></div>
-        <div className="docflow-mini-tools"><span>8<br /><small>TOOLS</small></span><span>100%<br /><small>SECURE</small></span><span>$0<br /><small>FREE</small></span></div>
-      </div>
-    ) : <img src={project.image} alt="" />}
+    <img src={project.image} alt={project.title === "DocFlow" ? "DocFlow homepage preview" : ""} />
     <span className="project-index">{String(index + 1).padStart(2, "0")}</span>
     <span className="project-chip">{project.title === "DocFlow" ? <>Website <ArrowUpRight size={13} /></> : <>View case study <ArrowUpRight size={13} /></>}</span>
   </>;
