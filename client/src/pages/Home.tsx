@@ -19,7 +19,7 @@ const portraitImage = "/manus-storage/soban-portrait-red_8dec445a.png";
 const projectImage = "/manus-storage/soban-hero-grid_e05eec9b.png";
 
 const projects = [
-  { title: "API Gateway", type: "Node.js · Express.js · REST API", description: "A unified gateway for switching between multiple AI models through one endpoint, with credit-based usage and region-aware routing.", image: projectImage, tone: "project-red", href: "https://github.com/SobanRasheed", demo: "https://chat.fennicai.tech" },
+  { title: "YumQuick", type: "React · Flutter · Food delivery", description: "A marketing website and cross-platform mobile app for a food delivery startup, from menu browsing to the order flow.", image: "/manus-storage/yumquick-website-preview_f9e13695.png", tone: "project-red", href: "https://github.com/SobanRasheed", demo: "https://yumquick.vercel.app/" },
   { title: "DocFlow", type: "Flutter · React · Vite · Node.js", description: "A cross-platform document conversion app with a self-hosted engine for PDF, Word, image conversion, and compression.", image: "/manus-storage/docflow-website-preview_6030468a.png", tone: "project-gray", href: "https://github.com/SobanRasheed", demo: "https://docflowmarketing.vercel.app/" },
   { title: "COMSATS Guide Pro", type: "HTML · CSS · JavaScript", description: "A student utility app with a GPA calculator, course planner, timetable builder, and persistent browser storage.", image: projectImage, tone: "project-black", href: "https://github.com/SobanRasheed/comsats-guide-pro", demo: "https://github.com/SobanRasheed/comsats-guide-pro" },
 ];
@@ -42,14 +42,15 @@ function ExternalLinkButton({ href, children }: { href: string; children: React.
 }
 
 function ProjectBanner({ project, index }: { project: (typeof projects)[number]; index: number }) {
+  const isLiveWebsite = project.title === "DocFlow" || project.title === "YumQuick";
   const content = <>
-    <img src={project.image} alt={project.title === "DocFlow" ? "DocFlow homepage preview" : ""} />
+    <img src={project.image} alt={isLiveWebsite ? `${project.title} homepage preview` : ""} />
     <span className="project-index">{String(index + 1).padStart(2, "0")}</span>
-    <span className="project-chip">{project.title === "DocFlow" ? <>Website <ArrowUpRight size={13} /></> : <>View case study <ArrowUpRight size={13} /></>}</span>
+    <span className="project-chip">{isLiveWebsite ? <>Website <ArrowUpRight size={13} /></> : <>View case study <ArrowUpRight size={13} /></>}</span>
   </>;
 
-  return project.title === "DocFlow"
-    ? <a className={`project-image ${project.tone} project-image-link`} href={project.demo} target="_blank" rel="noreferrer" aria-label="Visit the DocFlow website">{content}</a>
+  return isLiveWebsite
+    ? <a className={`project-image ${project.tone} project-image-link`} href={project.demo} target="_blank" rel="noreferrer" aria-label={`Visit the ${project.title} website`}>{content}</a>
     : <div className={`project-image ${project.tone}`}>{content}</div>;
 }
 
