@@ -41,6 +41,25 @@ function ExternalLinkButton({ href, children }: { href: string; children: React.
   return <a className="editorial-link" href={href} target="_blank" rel="noreferrer">{children}<ArrowUpRight size={14} /></a>;
 }
 
+function ProjectBanner({ project, index }: { project: (typeof projects)[number]; index: number }) {
+  const content = <>
+    {project.title === "DocFlow" ? (
+      <div className="docflow-mini-preview" aria-hidden="true">
+        <div className="docflow-mini-nav"><b>↘ DocFlow</b><span>Tools　 Solutions　 How It Works　 FAQ</span></div>
+        <div className="docflow-mini-copy"><small>DOCUMENT CONVERSION PLATFORM</small><strong>Your documents<br /><em>best version<br />starts here!</em></strong><div><i>DOWNLOAD FOR FREE</i><i>EXPLORE TOOLS</i></div></div>
+        <div className="docflow-mini-window"><span>PDF</span><b>↗</b><small>Fast · private · on-device</small></div>
+        <div className="docflow-mini-tools"><span>8<br /><small>TOOLS</small></span><span>100%<br /><small>SECURE</small></span><span>$0<br /><small>FREE</small></span></div>
+      </div>
+    ) : <img src={project.image} alt="" />}
+    <span className="project-index">{String(index + 1).padStart(2, "0")}</span>
+    <span className="project-chip">{project.title === "DocFlow" ? <>Website <ArrowUpRight size={13} /></> : <>View case study <ArrowUpRight size={13} /></>}</span>
+  </>;
+
+  return project.title === "DocFlow"
+    ? <a className={`project-image ${project.tone} project-image-link`} href={project.demo} target="_blank" rel="noreferrer" aria-label="Visit the DocFlow website">{content}</a>
+    : <div className={`project-image ${project.tone}`}>{content}</div>;
+}
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
@@ -121,7 +140,7 @@ export default function Home() {
           <div className="project-grid">
             {projects.map((project) => (
               <article className="editorial-project" key={project.title}>
-                <div className={`project-image ${project.tone}`}><img src={project.image} alt="" /><span className="project-index">{String(projects.indexOf(project) + 1).padStart(2, "0")}</span><span className="project-chip">View case study <ArrowUpRight size={13} /></span></div>
+                <ProjectBanner project={project} index={projects.indexOf(project)} />
                 <div className="project-info"><div><p className="project-type">{project.type}</p><h3>{project.title}</h3><p>{project.description}</p></div><div className="project-actions"><ExternalLinkButton href={project.demo}>Live demo</ExternalLinkButton><ExternalLinkButton href={project.href}>Repository</ExternalLinkButton></div></div>
               </article>
             ))}
