@@ -96,6 +96,7 @@ button:not(:disabled), a[href] { cursor: pointer; }
 .project-image { position: relative; min-height: 258px; overflow: hidden; }
 .editorial-project:first-child .project-image { min-height: 455px; }
 .project-image::after { position: absolute; inset: 0; content: ""; background: linear-gradient(180deg, transparent 47%, rgba(0,0,0,.48)); }
+.project-preview-picture { position: absolute; inset: 0; display: block; }
 .project-image img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; transition: transform .65s var(--ease), filter .65s var(--ease); }
 .editorial-project:hover .project-image img { transform: scale(1.06); filter: saturate(1.18); }
 .project-image-link { display: block; cursor: pointer; }

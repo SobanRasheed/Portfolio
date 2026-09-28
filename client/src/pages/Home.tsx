@@ -16,12 +16,11 @@ import {
 } from "lucide-react";
 
 const portraitImage = "/manus-storage/soban-portrait-red_8dec445a.png";
-const projectImage = "/manus-storage/soban-hero-grid_e05eec9b.png";
 
 const projects = [
-  { title: "YumQuick", type: "React · Flutter · Food delivery", description: "A marketing website and cross-platform mobile app for a food delivery startup, from menu browsing to the order flow.", image: "/manus-storage/yumquick-website-preview-portrait_3f440cbf.png", tone: "project-red", href: "https://github.com/SobanRasheed", demo: "https://yumquick.vercel.app/" },
-  { title: "DocFlow", type: "Flutter · React · Vite · Node.js", description: "A cross-platform document conversion app with a self-hosted engine for PDF, Word, image conversion, and compression.", image: "/manus-storage/docflow-website-preview_6030468a.png", tone: "project-gray", href: "https://github.com/SobanRasheed", demo: "https://docflowmarketing.vercel.app/" },
-  { title: "COMSATS Guide Pro", type: "HTML · CSS · JavaScript", description: "A student utility app with a GPA calculator, course planner, timetable builder, and persistent browser storage.", image: projectImage, tone: "project-black", href: "https://github.com/SobanRasheed/comsats-guide-pro", demo: "https://github.com/SobanRasheed/comsats-guide-pro" },
+  { title: "YumQuick", type: "React · Flutter · Food delivery", description: "A marketing website and cross-platform mobile app for a food delivery startup, from menu browsing to the order flow.", desktopImage: "/manus-storage/yumquick-desktop_f23640f7.png", mobileImage: "/manus-storage/yumquick-mobile_49578ca3.png", tone: "project-red", href: "https://github.com/SobanRasheed", demo: "https://yumquick.vercel.app/" },
+  { title: "DocFlow", type: "Flutter · React · Vite · Node.js", description: "A cross-platform document conversion app with a self-hosted engine for PDF, Word, image conversion, and compression.", desktopImage: "/manus-storage/docflow-desktop_a83b9f0b.png", mobileImage: "/manus-storage/docflow-mobile_47f70ac4.png", tone: "project-gray", href: "https://github.com/SobanRasheed", demo: "https://docflowmarketing.vercel.app/" },
+  { title: "Social Frontend", type: "React · Community platform · Manga", description: "An interactive entertainment platform for memberships, manga discovery, stories, events, and creator communities.", desktopImage: "/manus-storage/social-frontend-desktop_f1d47151.png", mobileImage: "/manus-storage/social-frontend-mobile_7fa4db81.png", tone: "project-black", href: "https://github.com/SobanRasheed", demo: "https://social-frontend-mocha.vercel.app/" },
 ];
 
 const skills = [
@@ -42,9 +41,12 @@ function ExternalLinkButton({ href, children }: { href: string; children: React.
 }
 
 function ProjectBanner({ project, index }: { project: (typeof projects)[number]; index: number }) {
-  const isLiveWebsite = project.title === "DocFlow" || project.title === "YumQuick";
+  const isLiveWebsite = true;
   const content = <>
-    <img src={project.image} alt={isLiveWebsite ? `${project.title} homepage preview` : ""} />
+    <picture className="project-preview-picture">
+      <source media="(max-width: 820px)" srcSet={project.mobileImage} />
+      <img src={project.desktopImage} alt={`${project.title} homepage preview`} />
+    </picture>
     <span className="project-index">{String(index + 1).padStart(2, "0")}</span>
     <span className="project-chip">{isLiveWebsite ? <>Website <ArrowUpRight size={13} /></> : <>View case study <ArrowUpRight size={13} /></>}</span>
   </>;
