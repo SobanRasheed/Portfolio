@@ -43,10 +43,15 @@ function ExternalLinkButton({ href, children }: { href: string; children: React.
 function ProjectBanner({ project, index }: { project: (typeof projects)[number]; index: number }) {
   const isLiveWebsite = true;
   const content = <>
-    <picture className="project-preview-picture">
-      <source media="(max-width: 820px)" srcSet={project.mobileImage} />
-      <img src={project.desktopImage} alt={`${project.title} homepage preview`} />
-    </picture>
+    <span className="project-device-stage" aria-hidden="true">
+      <span className="device-laptop">
+        <span className="device-laptop-screen"><span className="device-camera" /><img src={project.desktopImage} alt="" /></span>
+        <span className="device-laptop-base" />
+      </span>
+      <span className="device-phone">
+        <span className="device-phone-speaker" /><img src={project.mobileImage} alt="" />
+      </span>
+    </span>
     <span className="project-index">{String(index + 1).padStart(2, "0")}</span>
     <span className="project-chip">{isLiveWebsite ? <>Website <ArrowUpRight size={13} /></> : <>View case study <ArrowUpRight size={13} /></>}</span>
   </>;
