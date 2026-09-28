@@ -19,7 +19,7 @@ const portraitImage = "/manus-storage/soban-portrait-red_8dec445a.png";
 const projectImage = "/manus-storage/soban-hero-grid_e05eec9b.png";
 
 const projects = [
-  { title: "YumQuick", type: "React · Flutter · Food delivery", description: "A marketing website and cross-platform mobile app for a food delivery startup, from menu browsing to the order flow.", image: "/manus-storage/yumquick-website-preview_f9e13695.png", tone: "project-red", href: "https://github.com/SobanRasheed", demo: "https://yumquick.vercel.app/" },
+  { title: "YumQuick", type: "React · Flutter · Food delivery", description: "A marketing website and cross-platform mobile app for a food delivery startup, from menu browsing to the order flow.", image: "/manus-storage/yumquick-website-preview-portrait_3f440cbf.png", tone: "project-red", href: "https://github.com/SobanRasheed", demo: "https://yumquick.vercel.app/" },
   { title: "DocFlow", type: "Flutter · React · Vite · Node.js", description: "A cross-platform document conversion app with a self-hosted engine for PDF, Word, image conversion, and compression.", image: "/manus-storage/docflow-website-preview_6030468a.png", tone: "project-gray", href: "https://github.com/SobanRasheed", demo: "https://docflowmarketing.vercel.app/" },
   { title: "COMSATS Guide Pro", type: "HTML · CSS · JavaScript", description: "A student utility app with a GPA calculator, course planner, timetable builder, and persistent browser storage.", image: projectImage, tone: "project-black", href: "https://github.com/SobanRasheed/comsats-guide-pro", demo: "https://github.com/SobanRasheed/comsats-guide-pro" },
 ];
