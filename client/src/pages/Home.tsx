@@ -15,7 +15,7 @@ import {
   X,
 } from "lucide-react";
 
-const portraitImage = "/manus-storage/soban-portrait-red_8dec445a.png";
+const portraitImage = "/manus-storage/soban-hero-portrait-personal_2e84bbcc.png";
 
 const projects = [
   { title: "YumQuick", type: "React · Flutter · Food delivery", description: "A marketing website and cross-platform mobile app for a food delivery startup, from menu browsing to the order flow.", desktopImage: "/manus-storage/yumquick-desktop_f23640f7.png", mobileImage: "/manus-storage/yumquick-mobile_49578ca3.png", tone: "project-red", href: "https://github.com/SobanRasheed", demo: "https://yumquick.vercel.app/" },
