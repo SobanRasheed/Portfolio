@@ -150,7 +150,7 @@ export default function Home() {
 
         <section className="availability-section page-grid">
           <div className="availability-copy panel-red"><p className="kicker">What I can help with</p><h2>Bring me a product problem, not a job description.</h2><p>For teams with a real product to ship, I can help with the interface, the architecture behind it, or the final stretch before launch.</p></div>
-          <div className="rate-panel panel-cream"><p className="kicker">Ways to work together</p><div className="rate-row"><span>Product build</span><b>From $1,200</b><small>Fixed-scope sprint</small></div><div className="rate-row"><span>Technical partner</span><b>Custom rate</b><small>Ongoing collaboration</small></div><div className="rate-row"><span>Architecture review</span><b>From $400</b><small>One focused session</small></div><a className="text-arrow" href="#contact">Start a conversation <ArrowUpRight size={15} /></a></div>
+          <div className="rate-panel panel-cream"><p className="kicker">Ways to work together</p><div className="rate-row"><span>Product build</span><b>Negotiable</b><small>Fixed-scope sprint</small></div><div className="rate-row"><span>Technical partner</span><b>Negotiable</b><small>Ongoing collaboration</small></div><div className="rate-row"><span>Architecture review</span><b>Negotiable</b><small>One focused session</small></div><a className="text-arrow" href="#contact">Start a conversation <ArrowUpRight size={15} /></a></div>
         </section>
 
         <section id="writing" className="writing-section panel-cream">
