@@ -69,6 +69,13 @@ export default function Home() {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+    const subject = `Portfolio inquiry from ${name}`;
+    const body = `Hi Soban,\n\n${message}\n\n—\nFrom: ${name}\nEmail: ${email}`;
+    window.location.href = `mailto:sobanrasheed1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
     event.currentTarget.reset();
   };
@@ -160,7 +167,7 @@ export default function Home() {
 
         <section id="contact" className="contact-section page-grid">
           <div className="contact-copy panel-black"><p className="eyebrow-light">Have a good problem?</p><h2>Let’s make something <em>clear.</em></h2><p>Tell me what you’re building, where it’s stuck, or what you’re curious about. I’ll get back to you within a few working days.</p><button className="copy-email" onClick={copyEmail}><Mail size={15} /> sobanrasheed1@gmail.com <span>{copied ? <Check size={13} /> : <Copy size={13} />}</span></button></div>
-          <form className="contact-form panel-cream" onSubmit={handleSubmit}><p className="kicker">Send a note</p><label htmlFor="name">Your name</label><input id="name" name="name" required placeholder="Ada Lovelace" /><label htmlFor="email">Email</label><input id="email" name="email" type="email" required placeholder="ada@analytical.engine" /><label htmlFor="message">A little context</label><textarea id="message" name="message" rows={4} required placeholder="I’m working on a tool that..." /><button className="form-button" type="submit">{sent ? <>Message queued <Check size={15} /></> : <>Send a note <ArrowUpRight size={15} /></>}</button></form>
+          <form className="contact-form panel-cream" onSubmit={handleSubmit}><p className="kicker">Send a note</p><label htmlFor="name">Your name</label><input id="name" name="name" required placeholder="Ada Lovelace" /><label htmlFor="email">Email</label><input id="email" name="email" type="email" required placeholder="ada@analytical.engine" /><label htmlFor="message">A little context</label><textarea id="message" name="message" rows={4} required placeholder="I’m working on a tool that..." /><button className="form-button" type="submit">{sent ? <>Email draft opened <Check size={15} /></> : <>Open email draft <ArrowUpRight size={15} /></>}</button></form>
         </section>
       </main>
 
