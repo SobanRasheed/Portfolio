@@ -101,6 +101,7 @@ export default function Home() {
           <a href="#writing" onClick={() => setMenuOpen(false)}>Writing</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
+        <button className={`menu-backdrop ${menuOpen ? "is-open" : ""}`} type="button" aria-label="Close navigation menu" aria-hidden={!menuOpen} tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)} />
         <div className="nav-availability"><span /> Available for select work <a href="https://github.com/" target="_blank" rel="noreferrer"><Github size={15} /></a></div>
         <button className="editorial-menu-toggle" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label={menuOpen ? "Close menu" : "Open menu"}>{menuOpen ? <X size={19} /> : <Menu size={19} />}</button>
       </header>
