@@ -28,7 +28,10 @@ const skills = [
   ["Mobile app development", "Flutter, cross-platform products"],
   ["APIs and backend", "Node.js, Express.js, REST APIs"],
   ["System design and architecture", "Scalable services, API design, reliability"],
-  ["Engineering foundations", "OOP, DSA, database design, CI/CD"],
+  ["Cloud platforms and deployment", "Vercel, AWS, Docker, CI/CD"],
+  ["Databases and storage", "PostgreSQL, MongoDB, MySQL, Redis"],
+  ["Message queues and async systems", "RabbitMQ, Kafka, event-driven workflows"],
+  ["Engineering foundations", "OOP, DSA, database design, testing"],
 ];
 
 const articles = [
