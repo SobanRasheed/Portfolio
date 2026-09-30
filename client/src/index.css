@@ -61,7 +61,7 @@ button:not(:disabled), a[href] { cursor: pointer; }
 @keyframes bob { 50% { transform: translateY(4px); } }
 .portrait-panel { position: relative; display: flex; align-items: flex-end; justify-content: center; min-height: 630px; overflow: hidden; background: var(--red); }
 .portrait-backdrop { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.13), transparent 36%), repeating-linear-gradient(90deg, transparent 0 32px, rgba(90,20,10,.08) 33px 34px); }
-.portrait-panel img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; object-position: center; mix-blend-mode: multiply; filter: saturate(1.05) contrast(1.06); opacity: .88; }
+.portrait-panel img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; object-position: center; mix-blend-mode: normal; filter: none; opacity: 1; }
 .portrait-note { position: absolute; z-index: 2; right: 29px; bottom: 25px; color: var(--white); font-family: var(--mono); font-size: 10px; line-height: 1.4; text-align: right; text-transform: uppercase; }
 .portrait-note span { color: rgba(255,255,255,.68); font-size: 8px; }
 
@@ -97,12 +97,17 @@ button:not(:disabled), a[href] { cursor: pointer; }
 .editorial-project:first-child .project-image { min-height: 455px; }
 .project-image::after { position: absolute; inset: 0; content: ""; background: linear-gradient(180deg, transparent 47%, rgba(0,0,0,.48)); }
 .project-device-stage { position: absolute; z-index: 1; inset: 0; display: grid; place-items: center; }
-.device-laptop { display: flex; flex-direction: column; align-items: center; width: 84%; height: 86%; filter: drop-shadow(0 17px 18px rgba(15,15,15,.23)); transform: translateY(3%); }
-.device-laptop-screen { position: relative; display: block; width: 100%; height: calc(100% - 16px); padding: 7px 7px 5px; overflow: hidden; border: 2px solid #31343a; border-bottom: 4px solid #181a1e; border-radius: 12px 12px 4px 4px; background: #202329; box-shadow: inset 0 0 0 1px rgba(255,255,255,.12); }
-.device-laptop-screen img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; border-radius: 4px; }
-.device-camera { position: absolute; z-index: 2; top: 3px; left: 50%; width: 4px; height: 4px; border-radius: 50%; background: #090a0c; transform: translateX(-50%); }
-.device-laptop-base { position: relative; width: 111%; height: 13px; border-radius: 0 0 12px 12px; background: linear-gradient(#9da1a7, #62666c); box-shadow: 0 4px 0 #3f4247; }
-.device-laptop-base::after { position: absolute; top: 3px; left: 50%; width: 23%; height: 3px; border-radius: 0 0 5px 5px; content: ""; background: #51555b; transform: translateX(-50%); }
+.device-laptop { display: flex; flex-direction: column; align-items: center; width: 88%; height: 84%; filter: drop-shadow(0 20px 18px rgba(15,15,15,.26)); transform: translateY(2%); }
+.device-laptop-screen { position: relative; display: block; width: 100%; height: calc(100% - 18px); padding: 26px 7px 7px; overflow: hidden; border: 2px solid #25282d; border-bottom: 5px solid #111216; border-radius: 14px 14px 5px 5px; background: #191b20; box-shadow: inset 0 0 0 1px rgba(255,255,255,.14), 0 0 0 1px rgba(0,0,0,.12); }
+.device-laptop-screen img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; border-radius: 3px; }
+.device-camera { position: absolute; z-index: 2; top: 7px; left: 50%; width: 4px; height: 4px; border-radius: 50%; background: #090a0c; box-shadow: 0 0 0 1px rgba(255,255,255,.08); transform: translateX(-50%); }
+.device-browser-bar { position: absolute; z-index: 3; top: 0; right: 0; left: 0; display: flex; align-items: center; gap: 8px; height: 24px; padding: 0 9px; color: #858b96; background: #24272d; font-family: var(--mono); font-size: 6px; }
+.browser-controls { display: flex; gap: 4px; }.browser-controls i { display: block; width: 5px; height: 5px; border-radius: 50%; background: #6d737d; }.browser-controls i:first-child { background: #e26d61; }.browser-controls i:nth-child(2) { background: #e4b24e; }.browser-controls i:nth-child(3) { background: #65b87a; }
+.browser-address { flex: 1; overflow: hidden; padding: 4px 8px; border: 1px solid #343841; border-radius: 4px; color: #9da2ac; background: #1b1e23; white-space: nowrap; text-overflow: ellipsis; }
+.device-browser-bar b { font-size: 8px; font-weight: 400; letter-spacing: 1px; }
+.device-laptop-base { position: relative; width: 112%; height: 16px; border-radius: 0 0 14px 14px; background: linear-gradient(#a9adb4, #6b7077 58%, #555a61); box-shadow: 0 4px 0 #36393f, 0 7px 7px rgba(0,0,0,.16); }
+.device-laptop-base::before { position: absolute; top: -2px; left: 3%; width: 94%; height: 3px; border-radius: 0 0 7px 7px; content: ""; background: #4c5158; }
+.device-laptop-base::after { position: absolute; top: 3px; left: 50%; width: 22%; height: 3px; border-radius: 0 0 5px 5px; content: ""; background: #4c5057; transform: translateX(-50%); }
 .device-phone { display: none; position: relative; width: 42%; max-width: 178px; height: 92%; padding: 7px 5px 8px; overflow: visible; border: 2px solid #3d4148; border-radius: 28px; background: linear-gradient(145deg, #565b63, #111318 34%, #0c0d10 72%, #4a4e55); box-shadow: 0 20px 28px rgba(15,15,15,.34), inset 0 0 0 2px rgba(255,255,255,.1), inset 0 0 0 4px rgba(0,0,0,.45); }
 .device-phone::before { position: absolute; z-index: -1; top: 56px; right: -4px; width: 3px; height: 48px; border-radius: 0 3px 3px 0; content: ""; background: #686d75; box-shadow: 0 12px 0 #686d75; }
 .device-phone::after { position: absolute; z-index: 3; bottom: 4px; left: 50%; width: 31%; height: 3px; border-radius: 3px; content: ""; background: rgba(255,255,255,.75); transform: translateX(-50%); }

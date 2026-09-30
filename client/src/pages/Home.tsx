@@ -15,7 +15,7 @@ import {
   X,
 } from "lucide-react";
 
-const portraitImage = "/manus-storage/soban-hero-portrait-personal_2e84bbcc.png";
+const portraitImage = "/manus-storage/soban-hero-portrait-natural-skin-v2_da1b00d8.png";
 
 const projects = [
   { title: "YumQuick", type: "React · Flutter · Food delivery", description: "A marketing website and cross-platform mobile app for a food delivery startup, from menu browsing to the order flow.", desktopImage: "/manus-storage/yumquick-desktop_f23640f7.png", mobileImage: "/manus-storage/yumquick-mobile_49578ca3.png", tone: "project-red", href: "https://github.com/SobanRasheed", demo: "https://yumquick.vercel.app/" },
@@ -45,7 +45,7 @@ function ProjectBanner({ project, index }: { project: (typeof projects)[number];
   const content = <>
     <span className="project-device-stage" aria-hidden="true">
       <span className="device-laptop">
-        <span className="device-laptop-screen"><span className="device-camera" /><img src={project.desktopImage} alt="" /></span>
+        <span className="device-laptop-screen"><span className="device-camera" /><span className="device-browser-bar"><span className="browser-controls"><i /><i /><i /></span><span className="browser-address">{project.title.toLowerCase().replaceAll(" ", "-")}.vercel.app</span><b>•••</b></span><img src={project.desktopImage} alt="" /></span>
         <span className="device-laptop-base" />
       </span>
       <span className="device-phone">
