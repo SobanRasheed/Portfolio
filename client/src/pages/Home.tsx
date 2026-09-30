@@ -99,7 +99,7 @@ export default function Home() {
           <div className="intro-copy panel-cream">
             <p className="kicker">Hello, I’m</p>
             <h1>Soban<br /><span>Rasheed</span></h1>
-            <p className="intro-summary">I’m a full-stack developer from Pakistan, currently studying Computer Science at COMSATS University. I build responsive web products, mobile apps, and practical tools from first idea to working deployment.</p>
+            <p className="intro-summary">I’m a full-stack developer from Pakistan. I build responsive web products, cross-platform mobile apps, and practical tools with React, Flutter, Node.js, and modern cloud workflows—from first idea to working deployment.</p>
             <div className="social-row">
               <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={15} /></a>
               <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={15} /></a>
