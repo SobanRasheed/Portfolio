@@ -94,7 +94,7 @@ export default function Home() {
     <div className="editorial-site">
       <a className="skip-link" href="#main-content">Skip to content</a>
       <header className="editorial-nav">
-        <a className="editorial-logo" href="#top" aria-label="Soban Rasheed home"><span>SR</span><small>FULL-STACK<br />DEVELOPER</small></a>
+        <a className="editorial-logo" href="#top" aria-label="Soban Rasheed home"><small>FULL-STACK<br />DEVELOPER</small></a>
         <nav className={`editorial-menu ${menuOpen ? "is-open" : ""}`} aria-label="Primary navigation">
           <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
@@ -176,7 +176,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="editorial-footer"><a className="editorial-logo" href="#top"><span>SR</span><small>FULL-STACK<br />DEVELOPER</small></a><p>© 2025 Soban Rasheed</p><div className="footer-actions"><a className="text-arrow" href="/Soban_Rasheed_Resume.pdf" download="Soban_Rasheed_Resume.pdf"><Download size={14} /> Download resume</a><a href="mailto:sobanrasheed1@gmail.com">Email</a><a href="https://github.com/SobanRasheed" target="_blank" rel="noreferrer">GitHub</a></div></footer>
+      <footer className="editorial-footer"><a className="editorial-logo" href="#top"><small>FULL-STACK<br />DEVELOPER</small></a><p>© 2025 Soban Rasheed</p><div className="footer-actions"><a className="text-arrow" href="/Soban_Rasheed_Resume.pdf" download="Soban_Rasheed_Resume.pdf"><Download size={14} /> Download resume</a><a href="mailto:sobanrasheed1@gmail.com">Email</a><a href="https://github.com/SobanRasheed" target="_blank" rel="noreferrer">GitHub</a></div></footer>
     </div>
   );
 }
