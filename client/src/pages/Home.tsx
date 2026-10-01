@@ -15,12 +15,12 @@ import {
   X,
 } from "lucide-react";
 
-const portraitImage = "/manus-storage/soban-hero-portrait-natural-skin-v2_da1b00d8.png";
+const portraitImage = "/assets/hero-portrait.png";
 
 const projects = [
-  { title: "YumQuick", type: "React · Flutter · Food delivery", description: "A marketing website and cross-platform mobile app for a food delivery startup, from menu browsing to the order flow.", desktopImage: "/manus-storage/yumquick-desktop_f23640f7.png", mobileImage: "/manus-storage/yumquick-mobile_49578ca3.png", tone: "project-red", href: "https://github.com/SobanRasheed", demo: "https://yumquick.vercel.app/" },
-  { title: "DocFlow", type: "Flutter · React · Vite · Node.js", description: "A cross-platform document conversion app with a self-hosted engine for PDF, Word, image conversion, and compression.", desktopImage: "/manus-storage/docflow-desktop_a83b9f0b.png", mobileImage: "/manus-storage/docflow-mobile_47f70ac4.png", tone: "project-gray", href: "https://github.com/SobanRasheed", demo: "https://docflowmarketing.vercel.app/" },
-  { title: "Social Frontend", type: "React · Community platform · Manga", description: "An interactive entertainment platform for memberships, manga discovery, stories, events, and creator communities.", desktopImage: "/manus-storage/social-frontend-desktop_f1d47151.png", mobileImage: "/manus-storage/social-frontend-mobile_7fa4db81.png", tone: "project-black", href: "https://github.com/SobanRasheed", demo: "https://social-frontend-mocha.vercel.app/" },
+  { title: "YumQuick", type: "React · Flutter · Food delivery", description: "A marketing website and cross-platform mobile app for a food delivery startup, from menu browsing to the order flow.", desktopImage: "/assets/yumquick-desktop.png", mobileImage: "/assets/yumquick-mobile.png", tone: "project-red", href: "https://github.com/SobanRasheed", demo: "https://yumquick.vercel.app/" },
+  { title: "DocFlow", type: "Flutter · React · Vite · Node.js", description: "A cross-platform document conversion app with a self-hosted engine for PDF, Word, image conversion, and compression.", desktopImage: "/assets/docflow-desktop.png", mobileImage: "/assets/docflow-mobile.png", tone: "project-gray", href: "https://github.com/SobanRasheed", demo: "https://docflowmarketing.vercel.app/" },
+  { title: "Social Frontend", type: "React · Community platform · Manga", description: "An interactive entertainment platform for memberships, manga discovery, stories, events, and creator communities.", desktopImage: "/assets/social-frontend-desktop.png", mobileImage: "/assets/social-frontend-mobile.png", tone: "project-black", href: "https://github.com/SobanRasheed", demo: "https://social-frontend-mocha.vercel.app/" },
 ];
 
 const skills = [
