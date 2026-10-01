@@ -176,7 +176,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="editorial-footer"><a className="editorial-logo" href="#top"><span>SR</span><small>FULL-STACK<br />DEVELOPER</small></a><p>© 2025 Soban Rasheed</p><div className="footer-actions"><a className="text-arrow" href="/manus-storage/Soban_Rasheed_Resume_e90ff257.pdf" download="Soban_Rasheed_Resume.pdf"><Download size={14} /> Download resume</a><a href="mailto:sobanrasheed1@gmail.com">Email</a><a href="https://github.com/SobanRasheed" target="_blank" rel="noreferrer">GitHub</a></div></footer>
+      <footer className="editorial-footer"><a className="editorial-logo" href="#top"><span>SR</span><small>FULL-STACK<br />DEVELOPER</small></a><p>© 2025 Soban Rasheed</p><div className="footer-actions"><a className="text-arrow" href="/Soban_Rasheed_Resume.pdf" download="Soban_Rasheed_Resume.pdf"><Download size={14} /> Download resume</a><a href="mailto:sobanrasheed1@gmail.com">Email</a><a href="https://github.com/SobanRasheed" target="_blank" rel="noreferrer">GitHub</a></div></footer>
     </div>
   );
 }
